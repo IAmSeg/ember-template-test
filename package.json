@@ -1,0 +1,27 @@
+{
+  "name": "ember-template-test",
+  "version": "1.0.0",
+  "description": "Mocha test for verifying the correct compilation of ember templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --report spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ember-template-test"
+  },
+  "keywords": [
+    "ember",
+    "template",
+    "test",
+    "mocha"
+  ],
+  "author": "Will Johnson",
+  "license": "MIT",
+  "dependencies": {
+    "babel-register": "^6.4.3",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "walk-sync": "^0.2.6"
+  }
+}
