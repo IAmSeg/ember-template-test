@@ -19,7 +19,7 @@ let emberPath = '../bower_components/ember/ember.min';
 
 let files = walkSync(templatesPath, { directories: false });
 
-let expectedTemplates = expectedFiles.map( file => {
+let expectedTemplates = files.map( file => {
   return file.substring(0, file.indexOf('.'));
 });
 
