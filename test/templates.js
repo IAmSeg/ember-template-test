@@ -19,6 +19,11 @@ let emberPath = '../bower_components/ember/ember.min';
 
 let files = walkSync(templatesPath, { directories: false });
 
+let expectedTemplates = expectedFiles.map( file => {
+  return file.substring(0, file.indexOf('.'));
+});
+
+// expected files are optional, just provides additional testing
 let expectedFiles = [
   'camelCase.hbs',
   'index-dash.hbs',
@@ -27,10 +32,7 @@ let expectedFiles = [
   'components/my-component.hbs'
 ];
 
-let expectedTemplates = expectedFiles.map( file => {
-  return file.substring(0, file.indexOf('.'));
-});
-
+// optional spec for testing the walker
 describe('walker helper', function() {
   it('should list all files', function() {
     expect(files).to.have.members(expectedFiles);
